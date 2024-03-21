@@ -1,84 +1,75 @@
-/* Basisstijlen */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-image: url('fotos/foodback.jpg');
+    background-size: cover;
+    background-position: top;
+    color: #fff;
+    margin: 0;
 }
 
 .container {
-    width: 80%;
+    width: 50%;
     margin: auto;
-    padding: 0 20px;
-}
-
-/* Header */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-header h1 {
-    font-size: 2em;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Hero sectie */
-.hero {
-    background-image: url('restaurant.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+    padding: 2%;
     text-align: center;
-    padding: 100px 0;
 }
 
-.hero h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
+h1 {
+    font-size: 3vw;
+    margin-bottom: 2%;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+.login-form {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2%;
+    border-radius: 10px;
+
+
+    .container {
+        width: 80%;
+        margin: auto;
+        padding: 2%;
+        text-align: center;
+    }
+
+    .login-form {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 2%;
+        border-radius: 10px;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    @media (max-width: 600px) {
+        .login-form {
+            max-width: 60%;
+        }
+    }
+
+    margin: 0 auto;
 }
 
-.btn {
-    display: inline-block;
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 96%;
+    padding: 2%;
+    margin-bottom: 2%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.login-form input[type="submit"] {
+    width: 99%;
+    padding: 2%;
+    border: none;
+    border-radius: 5px;
     background-color: #ff9800;
     color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.login-form input[type="submit"]:hover {
     background-color: #f57c00;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
 }

@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO Gebruiker (naam, email, wachtwoord, adres, rol) VALUES ('$naam', '$email', '$wachtwoord', '$adres', '$rol')";
 
     if (mysqli_query($conn, $sql)) {
-        header("Location: index.php");
+        header("Location: dashboard.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </select><br><br>
             <input type="submit" value="Registreren">
         </form>
-        <p>Heb je al een account? <a href="login.php">Log hier in</a>.</p>
+        <p>Heb je al een account? <a href="index.php">Log hier in</a>.</p>
     </div>
 
 
