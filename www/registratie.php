@@ -28,12 +28,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registratie</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="homestyle.css">
 </head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
 <body>
-
-
 
 
     <div class="container">
