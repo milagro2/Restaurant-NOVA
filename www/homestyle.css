@@ -1,5 +1,5 @@
 body {
-    background-image: url('fotos/foodback.jpg');
+    background-image: url('fotos/flagfood.jpg');
     background-size: cover;
     background-position: top;
     color: #fff;
@@ -18,9 +18,9 @@ h1 {
     font-family: 'Amatic SC', cursive;
     font-size: 3vw;
     margin-bottom: 2%;
-    color: #ffffff;
-    background-image: linear-gradient(to right, #098e008f, #098e008f, #fbff00a3, #1a1eff93, #fbff00a3, #098e008f, #098e008f);
-    opacity: 0.9;
+    color: #ffffffd1;
+    background: #ffffff4a;
+    padding-bottom: 0.4%;
     border-radius: 10px;
 }
 
@@ -31,7 +31,7 @@ h2 {
 }
 
 form {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #00000092;
     padding: 3%;
     border-radius: 10px;
     margin: 0 auto;
@@ -71,13 +71,17 @@ input[type="submit"]:hover {
 }
 
 p {
-    margin-top: 2%;
+    margin-top: 3%;
+    border-radius: 4px;
+    font-size: 1.3vw;
 }
 
 a {
     color: #fff;
+    text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #ff5900;
 }

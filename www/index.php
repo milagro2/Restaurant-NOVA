@@ -53,8 +53,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <p class="error"><?php echo $error_message; ?></p>
                 <?php } ?>
                 <input type="submit" value="Inloggen">
+                <p>Nog geen account? <a href="registratie.php">Registreer hier</a>.</p>
             </form>
-            <p>Nog geen account? <a href="registratie.php">Registreer hier</a>.</p>
         </div>
     </div>
 </body>

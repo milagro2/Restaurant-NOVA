@@ -53,8 +53,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <option value="customer">Customer</option>
             </select><br><br>
             <input type="submit" value="Registreren">
+            <p>Heb je al een account? <a href="index.php">Log hier in</a>.</p>
         </form>
-        <p>Heb je al een account? <a href="index.php">Log hier in</a>.</p>
     </div>
 
 

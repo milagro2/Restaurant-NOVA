@@ -1,8 +1,48 @@
+/* Common styles */
 body {
-    background-image: url('fotos/brazfood.jpg');
-    background-size: 80%;
-    background-position: top;
-    color: #fff;
+    font-family: Arial, sans-serif;
     margin: 0;
-    font-family: 'Roboto Slab', serif;
+    padding: 0;
+    background: linear-gradient(to bottom, #9b0000, #ffcc29, #1e6b00);
+}
+
+
+/* Navbar styles */
+nav {
+    background-color: #444;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Dashboard container styles */
+.dashboard-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.dashboard-title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
 }
