@@ -70,7 +70,6 @@ a:hover {
 }
 
 
-
 .recipe {
     background-color: #00000085;
     padding: 2%;
@@ -79,18 +78,33 @@ a:hover {
     box-shadow: 0 10px 3px #0000004d;
     width: 88%;
     margin-left: 8%;
+    display: flex;
+    align-items: center;
 }
 
-/* Recipe title */
+
+
 .recipe h2 {
     font-size: 2.5vw;
     margin: 0;
     color: #f7660de8;
 }
 
-/* Recipe details */
 .recipe p {
     font-size: 1.3vw;
     margin-bottom: -1.5%;
     color: #fff;
+}
+
+.recipe img {
+    max-width: 20%;
+    height: auto;
+    margin-left: 2%;
+    order: 2;
+    border-radius: 200px;
+}
+
+.recipe-details {
+    flex: 1;
+    order: 1;
 }
