@@ -5,22 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link the dashboard CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <?php include 'navbar.php'; ?> <!-- Include the navbar -->
+    <?php $title = "Dashboard"; ?>
+    <?php include 'navbar.php'; ?>
+
 
     <div class="dashboard-container">
-        <h1 class="dashboard-title">Dashboard</h1>
-        <?php
-        for ($i = 0; $i < 30; $i++) {
-            echo "<br>";
-        }
-        ?>
         <p>hello</p>
     </div>
+
 </body>
 
 </html>

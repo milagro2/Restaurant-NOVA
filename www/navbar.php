@@ -1,8 +1,9 @@
 <nav>
+    <h1><?php echo $title; ?></h1>
     <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Reservations</a></li>
-        <li><a href="index.php">Logout</a></li>
+        <li><a href="dashboard.php">Home</a></li>
+        <li><a href="menu.php">Menu</a></li>
+        <li><a href="#">Reserveren</a></li>
+        <li><a href="index.php">Uitloggen</a></li>
     </ul>
 </nav>
