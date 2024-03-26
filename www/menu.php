@@ -17,6 +17,7 @@
     <?php $title = "Menu"; ?>
     <?php include 'navbar.php'; ?>
 
+    
     <div class="container">
 
         <?php
@@ -45,11 +46,13 @@
             echo "<p>Geen recepten gevonden.</p>";
         }
 
-        // Close database connection
         mysqli_close($conn);
         ?>
     </div>
 
+    <footer>
+        <p>hello</p>
+    </footer>
 </body>
 
 </html>

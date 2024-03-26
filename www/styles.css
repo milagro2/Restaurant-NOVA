@@ -21,6 +21,10 @@ nav {
     z-index: 1;
 }
 
+nav h1 {
+    font-size: 2vw;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -107,4 +111,31 @@ a:hover {
 .recipe-details {
     flex: 1;
     order: 1;
+}
+
+
+.footer {
+    background-color: #000000ba;
+    color: #ff0000;
+    padding: 2%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer p {
+    font-size: 1.2vw;
+    margin: 0;
+}
+
+.footer a {
+    color: #ffffff94;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.footer a:hover {
+    color: #ffffff;
 }
