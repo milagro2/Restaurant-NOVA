@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -59,12 +60,10 @@
         mysqli_close($conn);
         ?>
 
+        <br>
     </div>
 
 
-    <!-- <?php
-            require('footer.php');
-            ?> -->
 
 </body>
 

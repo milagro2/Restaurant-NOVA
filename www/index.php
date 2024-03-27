@@ -9,13 +9,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     require_once "database.php";
 
-    // check if user exists
     $sql = "SELECT * FROM Gebruiker WHERE email='$email' AND wachtwoord='$wachtwoord'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) == 1) {
+        $user = mysqli_fetch_assoc($result);
         $_SESSION["logged_in"] = true;
         $_SESSION["email"] = $email;
+        $_SESSION["rol"] = $user['rol'];
         header("Location: dashboard.php");
         exit();
     } else {
@@ -25,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($conn);
 }
 ?>
+
 
 
 

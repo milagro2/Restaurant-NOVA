@@ -1,3 +1,9 @@
+<?php 
+session_start();
+$title = "Dashboard"; 
+include 'navbar.php'; 
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -9,15 +15,9 @@
 </head>
 
 <body>
-
-    <?php $title = "Dashboard"; ?>
-    <?php include 'navbar.php'; ?>
-
-
     <div class="dashboard-container">
         <p>hello</p>
     </div>
-
 </body>
 
 </html>

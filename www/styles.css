@@ -80,7 +80,7 @@ a:hover {
     padding: 2%;
     margin-bottom: 3%;
     border-radius: 10px;
-    box-shadow: 0 10px 3px #0000004d;
+    box-shadow: 0 3px 3px #0000004d;
     width: 88%;
     margin-left: 8%;
     display: flex;
@@ -147,17 +147,20 @@ button[type="submit"]:hover {
     padding-left: 8.3%;
 }
 
-footer {
-    background-color: #F5A623;
-    color: #684010e6;
-    width: 99.8%;
-    text-align: center;
-    border: 2px solid #793e10b8;
-    border-bottom: 0px;
-    font-size: 2.5vw;
-    line-height: 1.5;
-    padding: 2% 0;
-    /* outline: 4px solid #ff0000; */
-    /* position: fixed;
-    bottom: 0; */
+.rol {
+    font-size: 1.4vw;
+    margin-left: -4%;
+    color: #ffffff94;
+    position: absolute;
+    bottom: 4.3%;
+
+}
+
+.role {
+    font-size: 1.5vw;
+    margin-left: 3%;
+    color: #ffffff94;
+    position: absolute;
+    bottom: 0%;
+
 }
