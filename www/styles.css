@@ -164,3 +164,75 @@ button[type="submit"]:hover {
     bottom: 0%;
 
 }
+
+/* Form styles */
+.adding {
+    background-color: #00000085;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 88%;
+    margin-left: 8%;
+}
+
+.adding h1 {
+    font-size: 2.5vw;
+    margin-bottom: 3%;
+    text-align: center;
+    color: #fff;
+}
+
+label {
+    display: flex;
+    margin-bottom: -1.9%;
+    font-size: 1.4vw;
+    color: #fff;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 1vw;
+    margin-top: -1%;
+    margin-bottom: 2%;
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        width: 80%;
+    }
+}
+
+
+.categorie {
+    width: 100%;
+
+}
+
+button[type="del"] {
+    padding: 0.8% 2.3%;
+    background-color: #ff5900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1vw;
+    transition: background-color 0.3s ease;
+    margin: 3% 0 -1% -9.1%;
+}
+
+button[type="edit"] {
+    padding: 0.8% 2.3%;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1vw;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Adjust margin-left to position it next to the delete button */
+}
+
+button[type="edit"]:hover {
+    background-color: #45a049;
+}

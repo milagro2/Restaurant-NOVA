@@ -3,7 +3,6 @@
     <ul>
         <li><a href="menu.php">Menu</a></li>
         <li><a href="#">Reserveren</a></li>
-        <li><a href="index.php">Uitloggen</a></li>
         <li class="rol">Uw rol is:</li>
         <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) : ?>
 
@@ -19,6 +18,7 @@
                 <li class="role">Customer</a></li>
 
             <?php endif; ?>
+            <li><a href="index.php">Uitloggen</a></li>
 
         <?php else : ?>
             <li><a href="index.php">Inloggen</a></li>
