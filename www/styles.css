@@ -230,7 +230,7 @@ button[type="edit"] {
     cursor: pointer;
     font-size: 1.1vw;
     transition: background-color 0.3s ease;
-    margin-left: 10px; /* Adjust margin-left to position it next to the delete button */
+    margin-left: 10px;
 }
 
 button[type="edit"]:hover {

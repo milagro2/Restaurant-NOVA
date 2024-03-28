@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -8,7 +10,6 @@
     <title>Menu</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Add/Edit/Delete Button Styles */
         .recipe-buttons {
             display: flex;
             justify-content: space-between;
@@ -71,18 +72,18 @@
                 echo '</div>';
                 echo '<img src="fotos/' . $row["afbeelding"] . '" alt="' . $row["naam"] . '">';
 
-                // verwijder knop
+                // Edit button
                 if ($_SESSION['rol'] === 'admin' || $_SESSION['rol'] === 'employee') {
                     echo '<div class="recipe-buttons">';
+                    echo '<form action="edit_recipe.php" method="get">';
+                    echo '<input type="hidden" name="recipe_id" value="' . $row["productID"] . '">';
+                    echo '<button type="submit">Bewerken</button>';
+                    echo '</form>';
+
+                    // Delete button
                     echo '<form action="delete_recipe.php" method="post" onsubmit="return confirm(\'Weet je zeker dat je dit gerecht wil verwijderen?\');">';
                     echo '<input type="hidden" name="recipe_id" value="' . $row["productID"] . '">';
                     echo '<button type="del">Verwijderen</button>';
-                    echo '</form>';
-                    
-                    // bewerk knop
-                    echo '<form action="edit_recipe.php" method="post">';
-                    echo '<input type="hidden" name="recipe_id" value="' . $row["productID"] . '">';
-                    echo '<button type="edit">Bewerken</button>';
                     echo '</form>';
                     echo '</div>';
                 }
@@ -98,4 +99,5 @@
         <br>
     </div>
 </body>
+
 </html>
