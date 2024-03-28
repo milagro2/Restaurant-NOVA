@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     move_uploaded_file($afbeelding_tmp, $afbeelding_path);
 
     $is_vega = isset($_POST["is_vega"]) ? 1 : 0;
-    $categorie = $_POST["categorie"];
+    $categorie = $_POST["categorie"]; // Retrieve category name
     $aantal_voorraad = $_POST["aantal_voorraad"];
 
     // Use prepared statement to prevent SQL injection
@@ -103,14 +103,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <br>
             <input type="checkbox" id="is_vega" name="is_vega"><br><br>
             <label for="categorie">Categorie:</label><br>
-            <select class="categorie" name="categorie" required>
-                <option value="option0"> </option>
+            <select id="categorie" name="categorie" required>
+                <option value="">Selecteer categorie</option>
                 <option value="Voorgerecht">Voorgerecht</option>
                 <option value="Hoofdgerecht">Hoofdgerecht</option>
-                <option value="3">Dessert</option>
+                <option value="Dessert">Dessert</option>
                 <option value="Drank">Drank</option>
                 <option value="Tussendoortje">Tussendoortje</option>
-            </select><br><br>
+            </select>
+
+            <br><br>
             <label for="aantal_voorraad">Aantal voorraad:</label><br>
             <input type="number" id="aantal_voorraad" name="aantal_voorraad" min="0" required><br><br>
             <input type="submit" value="Opslaan">
