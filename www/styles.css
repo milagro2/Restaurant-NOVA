@@ -209,30 +209,31 @@ label {
 
 }
 
-button[type="del"] {
+/* Add/Edit button styles */
+button[type="del"],
+button[type="edit"] {
     padding: 0.8% 2.3%;
-    background-color: #ff5900;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1vw;
     transition: background-color 0.3s ease;
-    margin: 3% 0 -1% -9.1%;
+    margin-left: -9%;
+}
+
+button[type="del"] {
+    background-color: #ff5900;
 }
 
 button[type="edit"] {
-    padding: 0.8% 2.3%;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1vw;
-    transition: background-color 0.3s ease;
-    margin-left: 10px;
+    background-color: #c78d00;
+}
+
+button[type="del"]:hover {
+    background-color: #f52500;
 }
 
 button[type="edit"]:hover {
-    background-color: #45a049;
+    background-color: #c7b000;
 }

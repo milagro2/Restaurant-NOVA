@@ -9,30 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .recipe-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 1%;
-        }
 
-        button[type="del"],
-        button[type="edit"] {
-            padding: 0.8% 2.3%;
-            background-color: #ff5900;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1vw;
-            transition: background-color 0.3s ease;
-        }
-
-        button[type="del"]:hover,
-        button[type="edit"]:hover {
-            background-color: #f57c00;
-        }
-    </style>
 </head>
 
 <body>
@@ -69,15 +46,15 @@ session_start();
                 echo '<p><strong>Verkoopprijs:</strong> €' . $row["verkoopprijs"] . '</p>';
                 echo '<p><strong>Vegan:</strong> ' . ($row["is_vega"] ? "Ja" : "Nee") . '</p>';
                 echo '<p><strong>Categorie:</strong> ' . $row["categorie"] . '</p>';
-                echo '</div>';
-                echo '<img src="fotos/' . $row["afbeelding"] . '" alt="' . $row["naam"] . '">';
+
+                echo '<br>';
 
                 // Edit button
                 if ($_SESSION['rol'] === 'admin' || $_SESSION['rol'] === 'employee') {
                     echo '<div class="recipe-buttons">';
                     echo '<form action="edit_recipe.php" method="get">';
                     echo '<input type="hidden" name="recipe_id" value="' . $row["productID"] . '">';
-                    echo '<button type="submit">Bewerken</button>';
+                    echo '<button type="edit">Bewerken</button>';
                     echo '</form>';
 
                     // Delete button
@@ -87,6 +64,10 @@ session_start();
                     echo '</form>';
                     echo '</div>';
                 }
+
+                echo '</div>';
+                echo '<img src="fotos/' . $row["afbeelding"] . '" alt="' . $row["naam"] . '">';
+
 
                 echo '</div>';
             }
