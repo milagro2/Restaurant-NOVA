@@ -123,9 +123,11 @@ form {
 input[type="text"] {
     padding: 1%;
     width: 70%;
-    border: 2px solid #ccc;
+    border: none;
     border-radius: 5px;
     font-size: 1.1vw;
+    background:#0000004a;
+    color: white;
 }
 
 button[type="submit"] {

@@ -8,6 +8,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || ($_SESS
 
 require_once "database.php";
 
+// Handle deleting a user
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user_id'])) {
     $user_id = $_POST['delete_user_id'];
 
@@ -17,6 +18,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user_id'])) {
         exit();
     } else {
         echo "Error deleting user: " . mysqli_error($conn);
+    }
+}
+
+// Handle adding a new user
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_user'])) {
+    $naam = $_POST['naam'];
+    $adres = $_POST['adres'];
+    $email = $_POST['email'];
+    $wachtwoord = $_POST['wachtwoord']; // You may want to hash the password for security
+    $rol = $_POST['rol'];
+
+    $insert_sql = "INSERT INTO Gebruiker (naam, adres, email, wachtwoord, rol) VALUES ('$naam', '$adres', '$email', '$wachtwoord', '$rol')";
+    if (mysqli_query($conn, $insert_sql)) {
+        header("Refresh:0");
+        exit();
+    } else {
+        echo "Error adding user: " . mysqli_error($conn);
     }
 }
 
@@ -44,6 +62,34 @@ $result = mysqli_query($conn, $sql);
         margin-left: 23%;
 
     }
+
+
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    input[type="email"],
+    textarea,
+    select {
+        width: 98%;
+        padding: 1%;
+        border: 1px solid #ffffff6e;
+        border-radius: 5px;
+        font-size: 1vw;
+        background: #00000080;
+        color: #fff;
+        border: none;
+        margin-top: 2%;
+        margin-left: -8%;
+    }
+
+    button[type="submit"] {
+        margin-left: -8%;
+    }
+
+    label {
+        margin-left: -8%;
+    }
+</style>
 </style>
 
 <body>
@@ -86,6 +132,30 @@ $result = mysqli_query($conn, $sql);
             }
             ?>
         </table>
+
+        <!-- Add User Form -->
+        <?php if ($_SESSION['rol'] === 'admin') : ?>
+            <div class="add-user-form">
+                <h3>Nieuwe gebruiker toevoegen</h3>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <label for="naam">Naam:</label>
+                    <input type="text" id="naam" name="naam" required><br><br>
+                    <label for="adres">Adres:</label>
+                    <input type="text" id="adres" name="adres" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="wachtwoord">Wachtwoord:</label>
+                    <input type="password" id="wachtwoord" name="wachtwoord" required><br><br>
+                    <label for="rol">Rol:</label>
+                    <select name="rol" id="rol" required>
+                        <option value="admin">Admin</option>
+                        <option value="employee">Employee</option>
+                        <option value="customer">Customer</option>
+                    </select><br><br>
+                    <button type="submit" name="add_user">Toevoegen</button>
+                </form>
+            </div>
+        <?php endif; ?>
     </div>
 </body>
 
