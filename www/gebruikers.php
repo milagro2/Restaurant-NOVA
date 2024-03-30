@@ -8,15 +8,12 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || ($_SESS
 
 require_once "database.php";
 
-// Check if delete button is clicked
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user_id'])) {
     $user_id = $_POST['delete_user_id'];
 
-    // Delete user from the database
     $delete_sql = "DELETE FROM Gebruiker WHERE gebruikerID = $user_id";
     if (mysqli_query($conn, $delete_sql)) {
-        // User deleted successfully
-        header("Refresh:0"); // Refresh the page to reflect changes
+        header("Refresh:0");
         exit();
     } else {
         echo "Error deleting user: " . mysqli_error($conn);

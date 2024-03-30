@@ -17,14 +17,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["logged_in"] = true;
         $_SESSION["email"] = $email;
         $_SESSION["rol"] = $user['rol'];
+        $_SESSION["naam"] = $user['naam'];
+        $_SESSION["gebruikerID"] = $user['gebruikerID'];
         header("Location: menu.php");
         exit();
+    
+    
     } else {
         $error_message = "Ongeldige e-mail of wachtwoord. Probeer opnieuw.";
     }
 
     mysqli_close($conn);
 }
+
 ?>
 
 
