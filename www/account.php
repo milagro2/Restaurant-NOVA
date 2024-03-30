@@ -39,12 +39,14 @@ mysqli_close($conn);
         margin-left: 22%;
     }
 
-    button {
-        margin-left: -9%;
+    form {
+        margin-bottom: 2%;
+        margin-left: 0%;
     }
 </style>
+
 <body>
-    
+
 
     <?php $title = "Account"; ?>
     <?php include 'navbar.php'; ?>

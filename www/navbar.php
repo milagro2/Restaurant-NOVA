@@ -2,7 +2,7 @@
     <h1><?php echo $title; ?></h1>
     <ul>
         <li><a href="menu.php">Menu</a></li>
-        <li><a href="#">Reserveren</a></li>
+        <li><a href="reserveren.php">Reserveren</a></li>
         <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) : ?>
 
             <?php if ($_SESSION['rol'] === 'admin') : ?>

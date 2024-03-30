@@ -60,7 +60,8 @@ $result = mysqli_query($conn, $sql);
         background-color: #00000085;
         border-radius: 10px;
         margin-left: 23%;
-
+        margin-bottom: -4%;
+        padding-bottom: 52%;
     }
 
 
@@ -83,6 +84,7 @@ $result = mysqli_query($conn, $sql);
     }
 
     button[type="submit"] {
+
         margin-left: -8%;
     }
 
@@ -133,10 +135,36 @@ $result = mysqli_query($conn, $sql);
             ?>
         </table>
 
-        <!-- Add User Form -->
-        <?php if ($_SESSION['rol'] === 'admin') : ?>
-            <div class="add-user-form">
-                <h3>Nieuwe gebruiker toevoegen</h3>
+        <style>
+            .add-user-form {
+                display: none;
+            }
+
+            button {
+                padding: 1% 2%;
+                background-color: #ff5900;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1.1vw;
+                transition: background-color 0.3s ease;
+                margin-top: 2%;
+            }
+            button:hover {
+                background-color: #ff3100;
+            }
+        </style>
+
+        <body>
+
+
+            <?php if ($_SESSION['rol'] === 'admin') : ?>
+                <button onclick="toggleAddUserForm()">Nieuwe gebruiker toevoegen</button>
+            <?php endif; ?>
+
+            <!-- Add User Form -->
+            <div class="add-user-form" id="addUserForm">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <label for="naam">Naam:</label>
                     <input type="text" id="naam" name="naam" required><br><br>
@@ -155,8 +183,22 @@ $result = mysqli_query($conn, $sql);
                     <button type="submit" name="add_user">Toevoegen</button>
                 </form>
             </div>
-        <?php endif; ?>
+
+            <script>
+                function toggleAddUserForm() {
+                    var addUserForm = document.getElementById("addUserForm");
+                    if (addUserForm.style.display === "none") {
+                        addUserForm.style.display = "block";
+                    } else {
+                        addUserForm.style.display = "none";
+                    }
+                }
+            </script>
     </div>
+</body>
+
+</html>
+</div>
 </body>
 
 </html>
