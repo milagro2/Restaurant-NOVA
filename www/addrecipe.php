@@ -105,7 +105,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="categorie">Categorie:</label><br>
             <select id="categorie" name="categorie" required>
                 <option value="">Selecteer categorie</option>
-                <option value="Voorgerecht">Voorgerecht</option>
                 <option value="Hoofdgerecht">Hoofdgerecht</option>
                 <option value="Dessert">Dessert</option>
                 <option value="Drank">Drank</option>

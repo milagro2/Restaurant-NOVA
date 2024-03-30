@@ -45,8 +45,15 @@ session_start();
                 echo '<p><strong>Beschrijving:</strong> ' . $row["beschrijving"] . '</p>';
                 echo '<p><strong>Verkoopprijs:</strong> €' . $row["verkoopprijs"] . '</p>';
                 echo '<p><strong>Vegan:</strong> ' . ($row["is_vega"] ? "Ja" : "Nee") . '</p>';
+                
+                
                 echo '<p><strong>Categorie:</strong> ' . $row["categorie"] . '</p>';
 
+
+                if ($_SESSION['rol'] === 'admin' || $_SESSION['rol'] === 'employee') {
+                    echo '<p><strong>Inkoopprijs:</strong> €' . $row["inkoopprijs"] . '</p>';
+                    echo '<p><strong>Aantal voorraad:</strong> ' . $row["aantal_voorraad"] . '</p>';
+                }
                 echo '<br>';
 
                 // Edit button
@@ -72,8 +79,10 @@ session_start();
                 echo '</div>';
             }
         } else {
-            echo "<p class='right'>No recipes found.</p>";
+            echo "<p class='right'>Geen gerechten gevonden.</p>";
         }
+
+
 
         mysqli_close($conn);
         ?>

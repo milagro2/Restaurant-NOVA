@@ -237,3 +237,35 @@ button[type="del"]:hover {
 button[type="edit"]:hover {
     background-color: #c7b000;
 }
+
+
+h2 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ffffff;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #0b0b0baf;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #3030307e;
+}
+
+tr:hover {
+    background-color: #000000;
+}

@@ -13,7 +13,8 @@
             <?php elseif ($_SESSION['rol'] === 'employee') : ?>
                 <li class="role">Employee</a></li>
                 <li><a href="addrecipe.php">Gerecht toevoegen</a></li>
-
+                <li><a href="gebruikers.php">Gebruikers</a></li>
+                
             <?php elseif ($_SESSION['rol'] === 'customer') : ?>
                 <li class="role">Customer</a></li>
 
