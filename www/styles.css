@@ -239,10 +239,6 @@ button[type="edit"]:hover {
 }
 
 
-h2 {
-    color: #333;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -267,5 +263,5 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color: #000000;
+    background-color: #00000089;
 }
