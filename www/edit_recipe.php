@@ -32,15 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $categorie = isset($_POST["categorie"]) ? mysqli_real_escape_string($conn, $_POST["categorie"]) : '';
     $aantal_voorraad = isset($_POST["aantal_voorraad"]) ? $_POST["aantal_voorraad"] : 0;
 
-    // Check if a new image is uploaded
     if ($_FILES["afbeelding"]["size"] > 0) {
-        // Handle file upload
         $afbeelding_name = $_FILES["afbeelding"]["name"];
         $afbeelding_tmp = $_FILES["afbeelding"]["tmp_name"];
         $afbeelding_path = "fotos/" . $afbeelding_name;
         move_uploaded_file($afbeelding_tmp, $afbeelding_path);
     } else {
-        // Retain the existing image path
         $afbeelding_name = $row['afbeelding'];
     }
 

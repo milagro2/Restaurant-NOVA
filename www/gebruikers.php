@@ -8,7 +8,6 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || ($_SESS
 
 require_once "database.php";
 
-// Handle deleting a user
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user_id'])) {
     $user_id = $_POST['delete_user_id'];
 
@@ -21,12 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user_id'])) {
     }
 }
 
-// Handle adding a new user
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_user'])) {
     $naam = $_POST['naam'];
     $adres = $_POST['adres'];
     $email = $_POST['email'];
-    $wachtwoord = $_POST['wachtwoord']; // You may want to hash the password for security
+    $wachtwoord = $_POST['wachtwoord'];
     $rol = $_POST['rol'];
 
     $insert_sql = "INSERT INTO Gebruiker (naam, adres, email, wachtwoord, rol) VALUES ('$naam', '$adres', '$email', '$wachtwoord', '$rol')";
@@ -151,6 +149,7 @@ $result = mysqli_query($conn, $sql);
                 transition: background-color 0.3s ease;
                 margin-top: 2%;
             }
+
             button:hover {
                 background-color: #ff3100;
             }

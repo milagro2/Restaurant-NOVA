@@ -45,8 +45,8 @@ session_start();
                 echo '<p><strong>Beschrijving:</strong> ' . $row["beschrijving"] . '</p>';
                 echo '<p><strong>Verkoopprijs:</strong> €' . $row["verkoopprijs"] . '</p>';
                 echo '<p><strong>Vegan:</strong> ' . ($row["is_vega"] ? "Ja" : "Nee") . '</p>';
-                
-                
+
+
                 echo '<p><strong>Categorie:</strong> ' . $row["categorie"] . '</p>';
 
 

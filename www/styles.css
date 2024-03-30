@@ -126,7 +126,7 @@ input[type="text"] {
     border: none;
     border-radius: 5px;
     font-size: 1.1vw;
-    background:#0000004a;
+    background: #0000004a;
     color: white;
 }
 
@@ -246,11 +246,14 @@ table {
     border-collapse: collapse;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ffffff;
 }
 
-th, td {
+th,
+td {
     padding: 8px;
     text-align: left;
 }

@@ -14,17 +14,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inkoopprijs = $_POST["inkoopprijs"];
     $verkoopprijs = $_POST["verkoopprijs"];
 
-    // Handle file upload
     $afbeelding_name = $_FILES["afbeelding"]["name"];
     $afbeelding_tmp = $_FILES["afbeelding"]["tmp_name"];
     $afbeelding_path = "fotos/" . $afbeelding_name;
     move_uploaded_file($afbeelding_tmp, $afbeelding_path);
 
     $is_vega = isset($_POST["is_vega"]) ? 1 : 0;
-    $categorie = $_POST["categorie"]; // Retrieve category name
+    $categorie = $_POST["categorie"];
     $aantal_voorraad = $_POST["aantal_voorraad"];
 
-    // Use prepared statement to prevent SQL injection
     $sql = "INSERT INTO Product (naam, beschrijving, inkoopprijs, verkoopprijs, afbeelding, is_vega, categorie, aantal_voorraad) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ssddsiid", $naam, $beschrijving, $inkoopprijs, $verkoopprijs, $afbeelding_name, $is_vega, $categorie, $aantal_voorraad);
@@ -105,6 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="categorie">Categorie:</label><br>
             <select id="categorie" name="categorie" required>
                 <option value="">Selecteer categorie</option>
+                <option value="Voorgerecht">Voorgerecht</option>
                 <option value="Hoofdgerecht">Hoofdgerecht</option>
                 <option value="Dessert">Dessert</option>
                 <option value="Drank">Drank</option>
